@@ -1,10 +1,11 @@
-<pre><p>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+/* Author: lmborba */
+#include <stdio.h>
+#include <stdlib.h>
 
 char str[51][102];
 
 int max (int a, int b) {
-  if (a &gt; b) {
+  if (a > b) {
     return a;
   } else {
     return b;
@@ -16,39 +17,38 @@ int main() {
   int i;
   i = 0;
   fgets(str[i],102,stdin);
-  while (!((str[i][0] == '#') &amp;&amp; (str[i][1] == '\n'))) {
+  while (!((str[i][0] == '#') && (str[i][1] == '\n'))) {
     i++;
     fgets(str[i],102,stdin);
   };
   co = 0;
-  for (j=0;j&lt;i;j++) {
+  for (j=0;j<i;j++) {
     k = 0;
     while (str[j][k] != '\n') {
       k++;
     };
     co = max(co,k);
-    while (k &lt; 102) {
+    while (k < 102) {
       str[j][k] = ' ';
       k++;
     };
   };
-  printf(&quot;-&quot;);
-  for (k=0;k&lt;i;k++) {
-    printf(&quot;--&quot;);
+  printf("-");
+  for (k=0;k<i;k++) {
+    printf("--");
   };
-  printf(&quot;\n&quot;);
-  for (j=0;j&lt;36;j++) {
-    printf(&quot;|&quot;);
-    for (k=0;k&lt;i;k++) {
-      printf(&quot;%c|&quot;,str[k][j]);
+  printf("\n");
+  for (j=0;j<36;j++) {
+    printf("|");
+    for (k=0;k<i;k++) {
+      printf("%c|",str[k][j]);
     };
-    printf(&quot;\n&quot;);
+    printf("\n");
   };
-  printf(&quot;-&quot;);
-  for (k=0;k&lt;i;k++) {
-    printf(&quot;--&quot;);
+  printf("-");
+  for (k=0;k<i;k++) {
+    printf("--");
   };
-  printf(&quot;\n&quot;);
+  printf("\n");
   return 0;
 }
-</p></pre>

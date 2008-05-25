@@ -1,5 +1,6 @@
-<pre><p>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+/* Author: lmborba */
+#include <stdio.h>
+#include <stdlib.h>
 
 char str[230];
 
@@ -37,22 +38,21 @@ int main() {
   int mod2;
   int ind;
   fgets(str,230,stdin);
-  while (!((str[0] == '#') &amp;&amp; (str[1] == '\n'))) {
-    separa(&amp;ind,&amp;mod1,&amp;mod2);
+  while (!((str[0] == '#') && (str[1] == '\n'))) {
+    separa(&ind,&mod1,&mod2);
     i = ind;
     while (str[i] != 0) {
-      if ((str[i] &gt;=97) &amp;&amp; (str[i] &lt;= 122)) {
-	printf(&quot;%c&quot;,97+converte(str[i]-97,26,mod1));
-      } else if ((str[i] &gt;=65) &amp;&amp; (str[i] &lt;= 90)) {
-	printf(&quot;%c&quot;,65+converte(str[i]-65,26,mod1));
-      } else if ((str[i] &gt;=48) &amp;&amp; (str[i] &lt;= 57)) {
-	printf(&quot;%c&quot;,48+converte(str[i]-48,10,mod2));
+      if ((str[i] >=97) && (str[i] <= 122)) {
+	printf("%c",97+converte(str[i]-97,26,mod1));
+      } else if ((str[i] >=65) && (str[i] <= 90)) {
+	printf("%c",65+converte(str[i]-65,26,mod1));
+      } else if ((str[i] >=48) && (str[i] <= 57)) {
+	printf("%c",48+converte(str[i]-48,10,mod2));
       } else {
-	printf(&quot;%c&quot;,str[i]);
+	printf("%c",str[i]);
       };
       i++;
     };
     fgets(str,230,stdin);
   };
 }
-</p></pre>
