@@ -1,5 +1,6 @@
-<pre><p>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+/* Author: lmborba */
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct TURTLE {
   int nt;
@@ -14,8 +15,8 @@ typedef struct LIST {
 void inserelista(turtle ** turt, lturtle ** lturt) {
   lturtle * aux;
   aux = (lturtle *) malloc(sizeof(lturtle));
-  aux-&gt;turtl = *turt;
-  aux-&gt;next = *(lturt);
+  aux->turtl = *turt;
+  aux->next = *(lturt);
   *(lturt) = aux;
   return (void) 0;
 };
@@ -25,9 +26,9 @@ void limpalista(lturtle ** lturt, int b) {
   aux = *(lturt);
   while (aux != NULL) {
     aux2 = aux;
-    aux = aux-&gt;next;
+    aux = aux->next;
     if (b) {
-      free(aux2-&gt;turtl);
+      free(aux2->turtl);
     };
     free(aux2);
   };
@@ -36,18 +37,18 @@ void limpalista(lturtle ** lturt, int b) {
 
 void deleteitem(lturtle * anterior) {
   lturtle * aux;
-  aux = anterior-&gt;next;
-  anterior-&gt;next = (anterior-&gt;next)-&gt;next;
+  aux = anterior->next;
+  anterior->next = (anterior->next)->next;
   free(aux);
 };
 
 turtle ** procurastr(char a[256],lturtle * lturt) {
   lturtle * aux;
   int i;
-  for (aux = lturt;aux != NULL;aux = aux-&gt;next) {
-    for (i=0;((a[i] == ((aux-&gt;turtl)-&gt;nome)[i]) &amp;&amp; (a[i] != 0) &amp;&amp; (((aux-&gt;turtl)-&gt;nome)[i] != 0));i++);
-    if ((a[i] == 0) &amp;&amp; (((aux-&gt;turtl)-&gt;nome)[i] == 0)) {
-      return &amp;(aux-&gt;turtl);
+  for (aux = lturt;aux != NULL;aux = aux->next) {
+    for (i=0;((a[i] == ((aux->turtl)->nome)[i]) && (a[i] != 0) && (((aux->turtl)->nome)[i] != 0));i++);
+    if ((a[i] == 0) && (((aux->turtl)->nome)[i] == 0)) {
+      return &(aux->turtl);
     };
   };
   return NULL;
@@ -66,22 +67,22 @@ int main() {
   lista2 = NULL;
   lista3 = NULL;
   char str[256];
-  scanf(&quot;%d&quot;,&amp;n);
-  for (i=0;i&lt;n;i++) {
-    scanf(&quot;%d&quot;,&amp;d);
-    limpalista(&amp;lista,1);
-    limpalista(&amp;lista2,0);
+  scanf("%d",&n);
+  for (i=0;i<n;i++) {
+    scanf("%d",&d);
+    limpalista(&lista,1);
+    limpalista(&lista2,0);
     fgets(str,256,stdin);
-    for (j=0;j&lt;d;j++) {
+    for (j=0;j<d;j++) {
       aux = (turtle *) malloc(sizeof(turtle));
-      aux-&gt;nt = 0;
-      fgets(aux-&gt;nome,256,stdin);
-      inserelista(&amp;aux,&amp;(lista));
+      aux->nt = 0;
+      fgets(aux->nome,256,stdin);
+      inserelista(&aux,&(lista));
     };
-    for (j=0;j&lt;d;j++) {
+    for (j=0;j<d;j++) {
       fgets(str,256,stdin);
-      inserelista(procurastr(str,lista),&amp;lista2);
-      (lista2-&gt;turtl)-&gt;nt = j;
+      inserelista(procurastr(str,lista),&lista2);
+      (lista2->turtl)->nt = j;
     };
 
     aux2 = lista;
@@ -89,19 +90,18 @@ int main() {
     ant = NULL;
 
     while (aux2 != NULL) {
-      if (aux3-&gt;turtl == aux2-&gt;turtl) {
-	aux3 = aux3-&gt;next;
+      if (aux3->turtl == aux2->turtl) {
+	aux3 = aux3->next;
       };
-      aux2 = aux2-&gt;next;
+      aux2 = aux2->next;
     };
 
     while(aux3 != NULL) {
-      printf(&quot;%s&quot;,(aux3-&gt;turtl)-&gt;nome);
-      aux3 = aux3-&gt;next;
+      printf("%s",(aux3->turtl)->nome);
+      aux3 = aux3->next;
     };
-    printf(&quot;\n&quot;);
+    printf("\n");
   };
 
   return 0;
 };
-</p></pre>

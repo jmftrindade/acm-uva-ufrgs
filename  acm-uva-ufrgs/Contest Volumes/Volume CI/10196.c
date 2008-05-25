@@ -1,4 +1,5 @@
-<pre><p>#include &lt;stdio.h&gt;
+/* Author: lmborba */
+#include <stdio.h>
 
 #define chuta(a) (a + (bw*32))
 
@@ -10,11 +11,11 @@ int acha (int a, int b, int bw) {
 
   i = a-1;
   j = b-1;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     i--;
     j--;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('B')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -22,11 +23,11 @@ int acha (int a, int b, int bw) {
 
   i = a+1;
   j = b-1;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     i++;
     j--;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('B')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -34,11 +35,11 @@ int acha (int a, int b, int bw) {
 
   i = a-1;
   j = b+1;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     i--;
     j++;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('B')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -46,11 +47,11 @@ int acha (int a, int b, int bw) {
 
   i = a+1;
   j = b+1;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     i++;
     j++;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('B')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -58,10 +59,10 @@ int acha (int a, int b, int bw) {
 
   i = a+1;
   j = b;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     i++;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('R')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -69,10 +70,10 @@ int acha (int a, int b, int bw) {
 
   i = a-1;
   j = b;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     i--;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('R')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -80,10 +81,10 @@ int acha (int a, int b, int bw) {
 
   i = a;
   j = b+1;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     j++;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('R')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -91,10 +92,10 @@ int acha (int a, int b, int bw) {
 
   i = a;
   j = b-1;
-  while ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8) &amp;&amp; (arr[i][j] == '.')) {
+  while ((i >= 0) && (j >= 0) && (i < 8) && (j < 8) && (arr[i][j] == '.')) {
     j--;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if ((arr[i][j] == chuta('R')) || (arr[i][j] == chuta('Q'))) {
       return 1;
     };
@@ -107,7 +108,7 @@ int acha (int a, int b, int bw) {
     i = a+1;
     j = b-1;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('P')) {
       return 1;
     };
@@ -120,7 +121,7 @@ int acha (int a, int b, int bw) {
     i = a+1;
     j = b+1;
   };
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('P')) {
       return 1;
     };
@@ -128,7 +129,7 @@ int acha (int a, int b, int bw) {
 
   i = a-2;
   j = b+1;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -136,7 +137,7 @@ int acha (int a, int b, int bw) {
 
   i = a-1;
   j = b+2;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -144,7 +145,7 @@ int acha (int a, int b, int bw) {
 
   i = a-2;
   j = b-1;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -152,7 +153,7 @@ int acha (int a, int b, int bw) {
 
   i = a-1;
   j = b-2;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -160,7 +161,7 @@ int acha (int a, int b, int bw) {
 
   i = a+2;
   j = b-1;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -168,7 +169,7 @@ int acha (int a, int b, int bw) {
 
   i = a+1;
   j = b-2;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -176,7 +177,7 @@ int acha (int a, int b, int bw) {
 
   i = a+2;
   j = b+1;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -184,7 +185,7 @@ int acha (int a, int b, int bw) {
 
   i = a+1;
   j = b+2;
-  if ((i &gt;= 0) &amp;&amp; (j &gt;= 0) &amp;&amp; (i &lt; 8) &amp;&amp; (j &lt; 8)) {
+  if ((i >= 0) && (j >= 0) && (i < 8) && (j < 8)) {
     if (arr[i][j] == chuta('N')) {
       return 1;
     };
@@ -200,9 +201,9 @@ int main() {
 
   bool = 0;
 
-  for (i=0;i&lt;8;i++) {
-    scanf(&quot;%s&quot;,arr[i]);
-    for (j=0;j&lt;8;j++) {
+  for (i=0;i<8;i++) {
+    scanf("%s",arr[i]);
+    for (j=0;j<8;j++) {
       if (arr[i][j] != '.') {
 	bool = 1;
 	break;
@@ -219,8 +220,8 @@ int main() {
 
     bool = 0;
 
-    for (i=0;i&lt;8;i++) {
-      for (j=0;j&lt;8;j++) {
+    for (i=0;i<8;i++) {
+      for (j=0;j<8;j++) {
 	if (arr[i][j] == 'k') {
 	  bool = bool | acha(i,j,0);
 	};
@@ -231,20 +232,20 @@ int main() {
     };
 
     if (bool == 2) {
-      printf(&quot;Game #%d: white king is in check.\n&quot;,x);
+      printf("Game #%d: white king is in check.\n",x);
     } else if (bool == 1) {
-      printf(&quot;Game #%d: black king is in check.\n&quot;,x);
+      printf("Game #%d: black king is in check.\n",x);
     } else {
-      printf(&quot;Game #%d: no king is in check.\n&quot;,x);
+      printf("Game #%d: no king is in check.\n",x);
     };
 
     x++;
 
     bool = 0;
 
-    for (i=0;i&lt;8;i++) {
-      scanf(&quot;%s&quot;,arr[i]);
-      for (j=0;j&lt;8;j++) {
+    for (i=0;i<8;i++) {
+      scanf("%s",arr[i]);
+      for (j=0;j<8;j++) {
 	if (arr[i][j] != '.') {
 	  bool = 1;
 	  break;
@@ -257,4 +258,3 @@ int main() {
   
   return 0;
 };
-</p></pre>
